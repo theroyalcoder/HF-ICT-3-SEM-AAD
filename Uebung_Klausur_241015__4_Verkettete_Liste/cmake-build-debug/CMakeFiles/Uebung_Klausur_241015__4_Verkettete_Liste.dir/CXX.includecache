@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015__4_Verkettete_Liste/main.cpp
+iostream
+-
+
