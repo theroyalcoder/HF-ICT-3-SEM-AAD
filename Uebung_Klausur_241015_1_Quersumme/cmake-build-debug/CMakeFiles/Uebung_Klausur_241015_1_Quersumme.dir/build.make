@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme
+CMAKE_SOURCE_DIR = /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/flags.make
 
 CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o: CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/flags.make
 CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o -c /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o -c /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/main.cpp
 
 CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/main.cpp > CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/main.cpp > CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.i
 
 CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/main.cpp -o CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/main.cpp -o CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.s
 
 CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o.requires:
 
@@ -91,7 +91,7 @@ Uebung_Klausur_241015_1_Quersumme_EXTERNAL_OBJECTS =
 Uebung_Klausur_241015_1_Quersumme: CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o
 Uebung_Klausur_241015_1_Quersumme: CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/build.make
 Uebung_Klausur_241015_1_Quersumme: CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Uebung_Klausur_241015_1_Quersumme"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Uebung_Klausur_241015_1_Quersumme"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/clean:
 .PHONY : CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/clean
 
 CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/depend:
-	cd /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/depend
 

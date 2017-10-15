@@ -7,8 +7,7 @@ int crossum(unsigned int n) {
 
     if (localN > 0) {
         result += localN%10;
-        localN /= 10;
-        return crossum(localN);
+        return crossum(localN / 10);
     }
 
     return result;

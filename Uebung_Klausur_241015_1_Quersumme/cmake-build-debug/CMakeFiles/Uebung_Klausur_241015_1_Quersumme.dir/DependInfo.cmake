@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/main.cpp" "/Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o"
+  "/Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/main.cpp" "/Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/CMakeFiles/Uebung_Klausur_241015_1_Quersumme.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

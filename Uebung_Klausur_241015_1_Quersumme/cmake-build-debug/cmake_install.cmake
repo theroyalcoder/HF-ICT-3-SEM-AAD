@@ -1,4 +1,4 @@
-# Install script for directory: /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme
+# Install script for directory: /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_1_Quersumme/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

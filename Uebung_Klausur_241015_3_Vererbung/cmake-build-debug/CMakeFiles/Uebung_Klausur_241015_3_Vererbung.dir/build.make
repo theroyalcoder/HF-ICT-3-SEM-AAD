@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung
+CMAKE_SOURCE_DIR = /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/flags.make
 
 CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.o: CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/flags.make
 CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.o -c /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.o -c /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/main.cpp
 
 CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/main.cpp > CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/main.cpp > CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.i
 
 CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/main.cpp -o CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/main.cpp -o CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.s
 
 CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.o.requires:
 
@@ -91,7 +91,7 @@ Uebung_Klausur_241015_3_Vererbung_EXTERNAL_OBJECTS =
 Uebung_Klausur_241015_3_Vererbung: CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/main.cpp.o
 Uebung_Klausur_241015_3_Vererbung: CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/build.make
 Uebung_Klausur_241015_3_Vererbung: CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Uebung_Klausur_241015_3_Vererbung"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Uebung_Klausur_241015_3_Vererbung"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/clean:
 .PHONY : CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/clean
 
 CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/depend:
-	cd /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug /Users/anuuthomson/ClionProjects/AAD/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug/CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug /Users/anuuthomson/ClionProjects/HF-ICT-AAD-1-SEM/Uebung_Klausur_241015_3_Vererbung/cmake-build-debug/CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Uebung_Klausur_241015_3_Vererbung.dir/depend
 
