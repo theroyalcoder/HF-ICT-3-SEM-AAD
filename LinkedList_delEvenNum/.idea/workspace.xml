@@ -101,7 +101,7 @@
     </entry>
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -114,9 +114,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="terminal" />
@@ -162,12 +160,12 @@
       <option name="presentableId" value="Default" />
       <updated>1508436073349</updated>
       <workItem from="1508436074775" duration="3961000" />
-      <workItem from="1508569131101" duration="118000" />
+      <workItem from="1508569131101" duration="223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4079000" />
+    <option name="totallyTimeSpent" value="4184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />

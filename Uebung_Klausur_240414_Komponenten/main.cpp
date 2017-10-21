@@ -6,30 +6,28 @@ private:
     int id;
     string name;
     double price;
-    Component* arr[1];
-    int count = 0;
+    int maxSize;
 public:
 //    getter
     int getID() {return id;}
     string getName() {return name;}
     double getPrice() {return price;}
-    Component *const *getarr() const { return arr;}
-
-    static int getPrice(int a){
-        return arr[a]->price;
-    }
-
-//Konstruktor
-    Component::Component () {
-        arr[count] = this;
-        count++;
-    }
+    Component(int id, int maxSize, const string &name, double price, Component** arr);
     Component** addComponent(Component **array, int & size);
     Component** removeComponent(int id, Component **array, int & size);
 };
 
-Component **Component::addComponent(Component **array, int &size) {
+Component::Component(int id, int maxSize, const string &name, double price, Component** arr) {
+    Component::id = id;
+    Component::price = price;
+    Component::maxSize = maxSize;
+    this->maxSize = 10;
+    arr[this->maxSize];
+    arr[id] = this;
+}
 
+Component **Component::addComponent(Component **array, int &size) {
+    array[this->id+1] = this;
 
     return array;
 }
@@ -48,14 +46,18 @@ int main() {
     int ID(0), SIZE(10);
     string NAME;
     double PRICE;
-
     Component *arr = new Component[SIZE]{};
+
+
 
     arr->addComponent(&arr, SIZE);
 
     if (ID == 0 && SIZE == 0) {
         arr[5].removeComponent(ID, &arr, SIZE);
     }
+
+    cout << arr->getPrice();
+
 
     return 0;
 }

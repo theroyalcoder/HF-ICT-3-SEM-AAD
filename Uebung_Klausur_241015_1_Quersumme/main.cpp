@@ -7,14 +7,14 @@ int crossum(unsigned int n) {
 
     if (localN > 0) {
         result += localN%10;
-        return crossum(localN / 10);
+        return crossum(static_cast<unsigned int>(localN / 10));
     }
 
     return result;
 }
 
 int main() {
-    int result = crossum(123);
+    int result = crossum(1234);
 
     cout << result << endl;
     return 0;
