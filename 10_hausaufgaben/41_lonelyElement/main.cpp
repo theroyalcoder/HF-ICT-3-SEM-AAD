@@ -27,7 +27,7 @@ char StringUtil::getLonelyElement(string input) {
         //cout << input[i];
     }
 
-    for (int i = 0; i < 256; i++ ) {
+    for (int i = 0; i < 255; i++ ) {
         if (ascii[input[i]] == 1) {
             output = input[i];
             cout << "output: " << output << endl;
