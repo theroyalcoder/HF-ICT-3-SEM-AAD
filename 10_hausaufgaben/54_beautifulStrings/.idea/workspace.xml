@@ -11,7 +11,41 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f28b504c-58bf-424c-9205-4ea14481badc" name="Default" comment="" />
+    <list default="true" id="f28b504c-58bf-424c-9205-4ea14481badc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/.vs/52_MaxValue_VS/v15/.suo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/.vs/52_MaxValue_VS/v15/Browse.VC.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/.vs/52_MaxValue_VS/v15/ipch/c39e05c0cfdbaded.ipch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS.sln" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/52_MaxValue_VS.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/52_MaxValue_VS.vcxproj" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/52_MaxValue_VS.vcxproj.filters" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/52_MaxValue_VS.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/52_MaxValue_VS.tlog/52_MaxValue_VS.lastbuildstate" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/52_MaxValue_VS.tlog/CL.command.1.tlog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/52_MaxValue_VS.tlog/CL.read.1.tlog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/52_MaxValue_VS.tlog/CL.write.1.tlog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/52_MaxValue_VS.tlog/link.command.1.tlog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/52_MaxValue_VS.tlog/link.read.1.tlog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/52_MaxValue_VS.tlog/link.write.1.tlog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/vc141.idb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/Debug/vc141.pdb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/stdafx.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/stdafx.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/52_MaxValue_VS/targetver.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/Debug/52_MaxValue_VS.ilk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../52_MaxValue_VS/Debug/52_MaxValue_VS.pdb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../53_bak/.idea/53_bak.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../53_bak/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../53_bak/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../53_bak/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../53_bak/CMakeLists.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../53_bak/main.cpp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../53_MaxValue/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../53_MaxValue/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../53_MaxValue/main.cpp" afterPath="$PROJECT_DIR$/../53_MaxValue/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +59,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="38" column="198" lean-forward="false" selection-start-line="38" selection-start-column="198" selection-end-line="38" selection-end-column="198" />
+            <state relative-caret-position="618">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -40,6 +74,9 @@
     <findStrings>
       <find>0</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -60,6 +97,9 @@
     <option name="y" value="-6" />
     <option name="width" value="686" />
     <option name="height" value="878" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -118,11 +158,12 @@
       <workItem from="1510320283229" duration="10000000" />
       <workItem from="1510331116375" duration="4176000" />
       <workItem from="1510342429524" duration="2878000" />
+      <workItem from="1510345744507" duration="145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28692000" />
+    <option name="totallyTimeSpent" value="28837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
@@ -133,12 +174,12 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33676094" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34961438" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3688946" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -173,6 +214,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -239,7 +290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="379" column="6" lean-forward="false" selection-start-line="379" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -259,8 +309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="38" column="198" lean-forward="false" selection-start-line="38" selection-start-column="198" selection-end-line="38" selection-end-column="198" />
+        <state relative-caret-position="618">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

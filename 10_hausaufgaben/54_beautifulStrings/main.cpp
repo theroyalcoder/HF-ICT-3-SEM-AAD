@@ -36,8 +36,5 @@ int main(int argc, char **argv) {
     str = "Sometimes test cases are hard to make up."; //729
     cout << "Die Zeichenkette " << str << " hat die Schoenheit " << calculate(str) << endl;
 
-    str = "Quam laboriosam possimus occaecati reprehenderit quos vel aut. Tempora aliquid ipsa sed vel eos. Officia architecto molestias ducimus quae esse explicabo. Sapiente porro voluptates quis.…";
-    cout << "Die Zeichenkette " << str << " hat die Schoenheit " << calculate(str) << endl;
-
     return 0;
 }
