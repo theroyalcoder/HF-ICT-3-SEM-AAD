@@ -1,0 +1,4 @@
+﻿  52_MaxValue_VS.cpp
+c:\users\nagara.infors-ht\documents\github\hf-ict-aad-1-sem\10_hausaufgaben\52_maxvalue_vs\52_maxvalue_vs\52_maxvalue_vs.cpp(42): warning C4018: ">=": Konflikt zwischen "signed" und "unsigned"
+c:\users\nagara.infors-ht\documents\github\hf-ict-aad-1-sem\10_hausaufgaben\52_maxvalue_vs\52_maxvalue_vs\52_maxvalue_vs.cpp(85): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+  52_MaxValue_VS.vcxproj -> C:\Users\nagara.INFORS-HT\Documents\GitHub\HF-ICT-AAD-1-SEM\10_hausaufgaben\52_MaxValue_VS\Debug\52_MaxValue_VS.exe
