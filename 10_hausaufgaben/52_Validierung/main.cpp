@@ -63,5 +63,15 @@ int main() {
         cout << "It's not a SearchTree" << endl;
     }
 
+    values = {100, 50, 150, 25, 75, 64, 85, 89, 110, 114, 135, 84, 86, 88, 90, 109, 111, 113, 190};
+
+    result = TreeUtil::isBinarySearchTree(values);
+
+    if (result) {
+        cout << "It's a SearchTree" << endl;
+    } else {
+        cout << "It's not a SearchTree" << endl;
+    }
+
     return 0;
 }

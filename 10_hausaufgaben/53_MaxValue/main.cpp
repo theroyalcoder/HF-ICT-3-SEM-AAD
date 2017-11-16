@@ -1,7 +1,3 @@
-#include <iostream>
-#include <cstdlib>
-#include <vector>
-#include <algorithm>
 #include "C:\Users\nagara.INFORS-HT\Documents\GitHub\HF-ICT-AAD-1-SEM\stdc++.h"
 using namespace std;
 
