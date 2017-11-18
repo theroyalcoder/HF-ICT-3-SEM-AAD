@@ -80,3 +80,5 @@ fabric.properties
 *.exe
 *.out
 *.app
+QT/32_palindrome/
+QT/33_substring/
