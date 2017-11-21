@@ -1,8 +1,7 @@
 #include <iostream>
-#include <cstdlib>
 #include <vector>
-#include <algorithm>
 #include <list>
+
 using namespace std;
 
 class SampleGraph {
@@ -86,7 +85,7 @@ void bfsUtil(int v, vector<int>* graph, int numberOfNodes) {
 //Breitensuche: Geht zuerst zum Nachbarn
 void bfs(vector<int> *graph, int numberOfNodes, int v) {
 // Alle Knote als nicht besucht markieren
-    auto *visited = new bool[v] {false};
+    bool *visited = new bool[v] {false};
 
 
     // Create a queue for BFS
