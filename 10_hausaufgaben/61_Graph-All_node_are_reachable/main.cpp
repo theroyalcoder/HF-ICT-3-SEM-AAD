@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <vector>
 #include <algorithm>
+#include <list>
 using namespace std;
 
 class SampleGraph {
@@ -9,6 +10,7 @@ public:
     static vector<int>* create(int numberOfNodes, int numberOfConnections);
     static void print(vector<int>* graph, int numberOfNodes);
 };
+
 
 vector<int>* SampleGraph::create(int numberOfNodes, int numberOfConnections) {
     auto * result = new vector<int>[numberOfNodes];
@@ -20,7 +22,7 @@ vector<int>* SampleGraph::create(int numberOfNodes, int numberOfConnections) {
         if (source != target) {
             if (find(result[source].begin(), result[source].end(), target) == result[source].end()) {
                 result[source].push_back(target);
-                result[target].push_back(source);
+                //result[target].push_back(source); //Auskommentieren, damit wir einen gerichteten Graph haben
                 counter++;
             }
         }
@@ -48,12 +50,71 @@ bool allNodeAreReachable(vector<int> *graph, int NUMBER_OF_NODES, int start) {
     return false;
 }
 
+void dfsUtil(int v, bool *visited, vector<int> *graph) {
+    // Aktuellen Knoten als besucht markieren
+    visited[v] = true;
+
+    // Ausgabe Knoten
+    cout << v << " ";
+
+    // Wiederholung für alle Eckpunkte für diesen Eckpunkt
+    for (int i : graph[v]) {
+        if (!visited[i]) {
+            dfsUtil(i, visited, graph);
+        }
+    }
+}
+
+//Tiefensuche: Geht zuerst zum letzten Node
 void dfs(vector<int>* graph, int numberOfNodes) {
+    // Mark all the vertices as not visited
+    auto visited = new bool[numberOfNodes] {false};
+
+    /*for (int i = 0; i < numberOfNodes; i++) {
+        visited[i] = false;
+    }*/
+
+    // Rekursivfunktion aufrufen
+    // to print DFS traversal
+    dfsUtil(0, visited, graph);
+}
+
+void bfsUtil(int v, vector<int>* graph, int numberOfNodes) {
 
 }
 
-void bfs(vector<int>* graph, int numberOfNodes) {
+//Breitensuche: Geht zuerst zum Nachbarn
+void bfs(vector<int> *graph, int numberOfNodes, int v) {
+// Alle Knote als nicht besucht markieren
+    auto *visited = new bool[v] {false};
 
+
+    // Create a queue for BFS
+    list<int> queue;
+
+    // Mark the current node as visited and enqueue it
+    visited[v] = true;
+    queue.push_back(v);
+
+    while(!queue.empty())
+    {
+        // Dequeue a vertex from queue and print it
+        v = queue.front();
+        cout << v << " ";
+        queue.pop_front();
+
+        // Get all adjacent vertices of the dequeued
+        // vertex s. If a adjacent has not been visited,
+        // then mark it visited and enqueue it
+
+        for (int i : graph[v]) {
+            if (!visited[i])
+            {
+                visited[i] = true;
+                queue.push_back(i);
+            }
+        }
+    }
 }
 
 bool connected(vector<int>* graph, int numberOfNodes, int nodeA, int nodeB) {
@@ -66,8 +127,15 @@ int main(int argc, char **argv) {
 
     const int NUMBER_OF_NODES = 10;
     const int NUMBER_OF_CONNECTIONS = 16;
-    SampleGraph::print(
-            SampleGraph::create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS), NUMBER_OF_NODES);
 
+//    SampleGraph SG;
+//    SG.print(SG.create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS), NUMBER_OF_NODES);
+//    SampleGraph::print(SampleGraph::create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS), NUMBER_OF_NODES);
+
+    vector<int>* Graph = SampleGraph::create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS);
+
+//    SampleGraph::print(Graph, NUMBER_OF_NODES);
+    dfs(Graph, NUMBER_OF_NODES);
+    bfs(Graph, NUMBER_OF_CONNECTIONS, 0);
     return 0;
 }
