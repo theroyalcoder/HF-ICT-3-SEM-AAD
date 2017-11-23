@@ -11,7 +11,7 @@ private:
   vector< vector<int> > weights;
 public:
     Graph();
-    void randomInit(int nNodes=10, int nConnections=15, bool directed=false);
+    vector<int> randomInit(int nNodes=10, int nConnections=15, bool directed=false);
     int getNumberOfNodes();
     vector<int> getNeighbours(int node);
     vector<int> getWeights(int node);

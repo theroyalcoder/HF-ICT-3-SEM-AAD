@@ -131,22 +131,24 @@ int main(int argc, char **argv) {
 //    Graph::print(Graph, NUMBER_OF_NODES);
     cout << endl;
 
-    vector<int>* Graph = Graph::randomInit(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS, false);
+    Graph g;
+    vector<int> graphVec = g.randomInit(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS, false);
+    vector<int> *p_graphVec = &graphVec;
 
     cout << "dfs: ";
-    dfs(Graph, NUMBER_OF_NODES);
+    dfs(p_graphVec, NUMBER_OF_NODES);
     cout << endl << "bfs: ";
-    bfs(Graph, NUMBER_OF_NODES, 0);
+    bfs(p_graphVec, NUMBER_OF_NODES, 0);
     cout << endl;
 
 
-    if (!allNodeAreReachable(Graph, NUMBER_OF_NODES, 0)) {
+    if (!allNodeAreReachable(p_graphVec, NUMBER_OF_NODES, 0)) {
         cout << endl << "Not all Nodes are reachable" << endl;
     } else {
         cout << endl << "All Nodes are reachable" << endl;
     }
 
-    shortestReach(Graph, NUMBER_OF_NODES, 0, 5);
+    shortestReach(p_graphVec, NUMBER_OF_NODES, 0, 5);
 
     return 0;
 }

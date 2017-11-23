@@ -45,17 +45,6 @@ void SampleGraph::print(vector<int>* graph, int numberOfNodes) {
     }
 }
 
-bool allNodeAreReachable(vector<int> *graph, int NUMBER_OF_NODES, int start) {
-    // Alle Knote als nicht besucht markieren
-//    auto *visited = new bool[v];
-
-    /*for (int i = 0; i < v; ++i) {
-        visited[i] = false;
-    }*/
-
-    return false;
-}
-
 void dfsUtil(int v, bool *visited, vector<int> *graph) {
     // Aktuellen Knoten als besucht markieren
     visited[v] = true;
@@ -108,7 +97,7 @@ void bfs(vector<int> *graph, int numberOfNodes, int v) {
         // vertex s. If a adjacent has not been visited,
         // then mark it visited and enqueue it
 
-        for (int i : graph[v]) {
+        for (auto i : graph[v]) {
             if (!visited[i])
             {
                 visited[i] = true;
@@ -123,22 +112,67 @@ bool connected(vector<int>* graph, int numberOfNodes, int nodeA, int nodeB) {
     return false;
 }
 
+bool allNodeAreReachable(vector<int> *graph, int NUMBER_OF_NODES, int start) {
+    // Alle Knoten als nicht besucht markieren
+    auto *visited = new bool[NUMBER_OF_NODES];
+    for (int i = 0; i < NUMBER_OF_NODES; ++i) {
+        visited[i] = false;
+    }
+
+    list<int> queue;
+
+    // Den jetzigen Knoten als besucht markieren und in "queue" speichern
+    visited[start] = true;
+    queue.push_back(start);
+
+    while(!queue.empty()) {
+        // Dequeue a vertex from queue and print it
+        start = queue.front();
+        cout << start << " ";
+        queue.pop_front();
+
+        // Get all adjacent vertices of the dequeued
+        // vertex s. If a adjacent has not been visited,
+        // then mark it visited and enqueue it
+
+        for (auto i : graph[start]) {
+            if (!visited[i])
+            {
+                visited[i] = true;
+                queue.push_back(i);
+            }
+        }
+
+    }
+
+    for (int j = 0; j < graph->size(); ++j) {
+        if (!visited[j]) return false;
+    }
+
+    return true;
+}
+
 
 int main(int argc, char **argv) {
     const int NUMBER_OF_NODES = 10;
     const int NUMBER_OF_CONNECTIONS = 16;
-
-//    SampleGraph SG;
-//    SG.print(SG.create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS), NUMBER_OF_NODES);
-//    SampleGraph::print(SampleGraph::create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS), NUMBER_OF_NODES);
-
     vector<int>* Graph = SampleGraph::create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS);
 
-    SampleGraph::print(Graph, NUMBER_OF_NODES);
-    cout << "DFS: ";
+/*    SampleGraph SG;
+    SG.print(SG.create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS), NUMBER_OF_NODES);
+    SampleGraph::print(SampleGraph::create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS), NUMBER_OF_NODES);
+    SampleGraph::print(Graph, NUMBER_OF_NODES);*/
+/*    cout << "DFS: ";
     dfs(Graph, NUMBER_OF_NODES);
     cout << endl << "BFS: ";
-    bfs(Graph, NUMBER_OF_NODES, 0);
+    bfs(Graph, NUMBER_OF_NODES, 0);*/
+
+    int start = 0;
+    if (!allNodeAreReachable(Graph, NUMBER_OF_NODES, start)) {
+        cout << "Not all Nodes are reachable" << endl;
+    } else {
+        cout << "All Nodes are reachable" << endl;
+    }
 
     return 0;
 }

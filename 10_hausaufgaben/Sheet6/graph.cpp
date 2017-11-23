@@ -11,7 +11,7 @@ using namespace std;
 Graph::Graph() {
 }
 
-void Graph::randomInit(int nNodes, int nConnections, bool directed) {
+vector<int> Graph::randomInit(int nNodes, int nConnections, bool directed) {
   vector<int> v;
   for (int i=0; i<nNodes; i++) {
     neighbours.push_back(v);
@@ -54,6 +54,7 @@ void Graph::randomInit(int nNodes, int nConnections, bool directed) {
       }
     }
   }
+  return v;
 }
 
 int Graph::getNumberOfNodes() {
