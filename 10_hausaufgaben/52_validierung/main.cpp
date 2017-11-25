@@ -1,60 +1,76 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
-
-/* Implementieren Sie eine Methode, welche einen Baum in Array Form bekommt.
- * Diese Methode liefert true, falls es sich um einen bina ̈ren Suchbaum handelt.
- * Falls es lediglich ein bina ̈rer Baum ist, liefert die Methode false.
- */
-
 
 class TreeUtil {
 public:
     static bool isBinarySearchTree(vector<int> values);
+    static bool upperValues(vector<int> &values, int index, int value);
 };
 
-bool TreeUtil::isBinarySearchTree(vector<int> values) {
-//    vector<int>::iterator it;
-    int posl(0), posr(0);
+bool TreeUtil::upperValues(vector<int> &values, int index, int value) {
+    //Abbruchbedingung
+    if (index <= 0) return true;
 
-    for (int i = 0; i < values.size()-2; i++) {
-        posl = (2 * i) + 1;
-        posr = (2 * i) + 2;
+    //Herausfinden, ob "Knoten" links oder rechts im Baum ist -> Mithilfe von Formel von Sheet 5.2
+    if (index % 2 == 0) {
+        // I am the right element
+        //Formel
+        index = (index - 2) / 2;
 
-        cout << "knoten: " << i << "\t" << posl << "\t" << posr << endl;
-
-        cout << "values: " << values[i] << "\t" << values[posl] << "\t" << values[posr] << endl << endl;
-        if (values[i] < values[posl]) {
+        // values[index] = a parent element
+        //Parent element wird mit "jetzigem" element gecheckt, wenn childknoten kleiner ist, dann falsch
+        if (values[index] > value) {
             return false;
         }
 
-        if (values[i] > values[posr]) {
+    } else {
+        // I am the left element
+        //Formel
+        index = (index - 1) / 2;
+        // values[index] = a parent element
+        //Parent element wird mit "jetzigem" element gecheckt, wenn childknoten grösser ist, dann falsch
+        if (values[index] <= value) {
             return false;
         }
     }
 
-    return true;
+    //Rekursivaufruf
+    return upperValues(values, index, value);
 }
 
-int main() {
-    int arr[6]{20, 12, 34, 9, 19, 29};
-    vector<int> vec;
-    vector<int>::iterator it;
+bool TreeUtil::isBinarySearchTree(vector<int> values) {
+    //Wieso kann man ersten Knoten überspringen??
+    for (int i = 1; i < values.size(); i++) {
+        if (!upperValues(values, i, values[i])) return false;
+    }
+    return true;
+};
 
-    for (int i : arr) {
-        vec.push_back(i);
+int main() {
+    bool result;
+    vector<int> values = {100, 50, 150, 25, 75, 125, 175, 12, 37, 62, 87, 112, 137, 162, 187, 10, 14, 35, 39, 60, 64,
+                          85, 89, 110, 114, 135, 139, 160, 164, 185, 189, 9, 11, 13, 15, 34, 36, 38, 40, 59, 61, 63, 65,
+                          84, 86, 88, 90, 109, 111, 113, 115, 134, 136, 138, 140, 159, 161, 163, 165, 184, 186, 188,
+                          190};
+
+    result = TreeUtil::isBinarySearchTree(values);
+
+    if (result) {
+        cout << "It's a SearchTree" << endl;
+    } else {
+        cout << "It's not a SearchTree" << endl;
     }
 
-//    for (it = vec.begin(); it != vec.end(); it++) {
-//        cout << *it << ", ";
-//    }
+    values = {100, 50, 150, 25, 75, 64, 85, 89, 110, 114, 135, 84, 86, 88, 90, 109, 111, 113, 190};
 
-    TreeUtil search;
+    result = TreeUtil::isBinarySearchTree(values);
 
-    if (search.isBinarySearchTree(vec)) {
-        cout << "It's a Binary Search Tree" << endl;
+    if (result) {
+        cout << "It's a SearchTree" << endl;
     } else {
-        cout << "It's NOT a Binary Search Tree" << endl;
+        cout << "It's not a SearchTree" << endl;
     }
 
     return 0;
