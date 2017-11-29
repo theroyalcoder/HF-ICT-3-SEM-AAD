@@ -31,7 +31,7 @@ bool BinaryTree::isBST(Node *n) {
 //    todo: DFS Algo bis zum Ende gehen, schauen ob jetziger Node kleiner ist als Node oben dran
 //    todo: BFS Algo immer Links gehen und schauen ob "Node left" kleiner ist als "Node i"
 
-    
+
 
 
 

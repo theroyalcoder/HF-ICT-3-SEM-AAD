@@ -11,7 +11,8 @@ public:
 };
 
 //Kontruktor so und nicht anders!!!!
-//Wichtig: Bei den Konstruktoren rot, left und right mit 0 initialisieren!!!!
+//left und right zeigen auf NULL (wichtig für Abfrage später in den Methoden)
+//value wird mit der mitgegebenen Value initialisiert
 Node::Node(int value) : left(nullptr), right(nullptr), value(value) {}
 
 
@@ -21,7 +22,7 @@ private:
     void insert(int v, Node * n);
     void height(Node * n, int & ch, int & max);
     void postOrder(Node * n);
-    int treeSum(Node *n, int &sum);
+    int treeSum(Node *n, int &summe);
 public:
     BinaryTree();
     void insert(int v);
@@ -30,34 +31,40 @@ public:
     int sum();
 };
 
+//Wichtig: Mit nullptr initialisieren
 BinaryTree::BinaryTree() : root(nullptr) {
 
 }
 
+//Methode: Fügt ein Node mit dem mitgegebenen Value ein
 void BinaryTree::insert(int v, Node *n) {
-//    todo: Überprüfen, ob v grösser oder kleiner als n->value ist, damit man es rechts oder links einfügen kann
 
-
+//    Falls int v kleiner als der value vom jetzigen Node ist, dann soll int v links vom node gespeichert werden
     if (v < n->value) {
 //        left
+//        Überprüfen ob der linke node leer ist
         if (n->left != nullptr) {
-//            v ist kleiner als n->value, aber links kein Platz, deshalb rekursiv aufruf und n->left mitgeben
+//            Links kein Platz, deshalb rekursiv aufruf n->left mitgeben
             insert(v, n->left);
         } else {
-//            v ist kleiner als n->value, hat platz
+//            Links ist leer, Node kann erstellt und int v eingefügt werden
             n->left = new Node(v);
         }
     } else {
 //        right
+//        Überprüfen ob der rechte node leer ist
         if (n->right != nullptr) {
+//            Rechts kein Platz, deshalb rekursiv aufruf n->left mitgeben
             insert(v, n->right);
         } else {
+//            Rechts ist leer, Node kann erstellt und int v eingefügt werden
             n->right = new Node(v);
         }
     }
 }
 
 void BinaryTree::insert(int v) {
+//    Falls es noch keine Nodes gibt, dann wird ein Node erstellt, sonst rekursive Methode erstellt
     if (root == nullptr) {
         root = new Node(v);
     } else {
@@ -65,18 +72,24 @@ void BinaryTree::insert(int v) {
     }
 }
 
+//    Herausfinden wieviel "Stockwerke" der Baum hat
 void BinaryTree::height(Node *n, int &ch, int &max) {
-//    todo: Herausfinden wieviel Stockwerke der Baum hat
+//    ch heisst current height: jetzige Höhe
+//    Wir gehen zuerst bis zum letzten linken Node, danach zum letzten rechten Node.
+//    Danach gehen wir wieder zurück zum root
 
+//    Falls n gleich nullptr ist, dann sind wir am Ende angekommen
     if (n == nullptr) {
         if (ch > max) {
             max = ch;
             return;
         }
     } else {
+//        Stockwerk erhöht
         ch++;
         height(n->left, ch, max);
         height(n->right, ch, max);
+//        Stockwerk verringert, da die rekursive Methode endet und wir den Stockwerk wieder verlassen
         ch--;
     }
 }
@@ -88,20 +101,22 @@ int BinaryTree::height() {
     return max;
 }
 
-void BinaryTree::postOrder() {
-    postOrder(root);
-    cout << endl;
-}
-
+//Postorder Ausgabe
 void BinaryTree::postOrder(Node *n) {
 //Postorder (Left, Right, Root)
-    if (n != 0) {
+    if (n != nullptr) {
         postOrder(n->left);
         postOrder(n->right);
         cout << n->value << ",";
     }
 }
 
+void BinaryTree::postOrder() {
+    postOrder(root);
+    cout << endl;
+}
+
+//Geht durch den ganzen Baum und zählt alle Werte zusammen und gibt sie zurück
 int BinaryTree::treeSum(Node *n, int &summe) {
     if (n!= nullptr) {
         summe += n->value;
