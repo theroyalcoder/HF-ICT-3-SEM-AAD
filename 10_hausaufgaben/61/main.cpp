@@ -9,8 +9,13 @@ struct Entry{
     int distance;
     bool marked;
     int precessor;
+
+//    Entry(int node, int distance, bool marked, int precessor);
     Entry(int node, int distance, bool marked, int precessor);
 };
+
+//Entry::Entry(int node, int distance, bool marked, int precessor) : node(node), distance(distance), marked(marked),
+//                                                                   precessor(precessor) {}
 
 Entry::Entry(int node, int distance, bool marked, int precessor) {
     this->node = node;
@@ -36,7 +41,6 @@ vector<int> * SampleGraph::create(int numberOfNodes, int numberOfConnections, bo
         if (source != target) {
             if (find(result[source].begin(), result[source].end(), target) == result[source].end()) {
                 result[source].push_back(target);
-//                Damit wir einen gerichteten Graph haben
                 if (!directed) {
                     result[target].push_back(source);
                 }
