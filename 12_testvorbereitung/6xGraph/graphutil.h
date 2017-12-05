@@ -16,7 +16,8 @@ public:
 
 class GraphUtil {
 public:
-  static vector<DijkstraEntry> dijkstra(Graph *g, int start);
+    static vector<DijkstraEntry> dijkstra(Graph *g, int start);
+    static int getNextDijkstraNode(vector<DijkstraEntry> result);
 
 };
 

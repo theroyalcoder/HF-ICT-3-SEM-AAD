@@ -1,16 +1,10 @@
 #include "graph.h"
-#include <cstdlib>
 #include <iostream>
-#include <sstream>
 #include <stack>
-#include <vector>
-#include <algorithm>
-using namespace std;
+#include <queue>
+#include <list>
 
-/* Diese Funktion erhält als Parameter einen Graphen, die Anzahl Knoten und den Start Knoten.
- * Die Funktion liefert true falls alle anderen Knoten im Graphen von start erreichbar sind.
- * Falls ein oder mehrere Knoten nicht erreichbar sind, so liefert die Funktion false.
- */
+using namespace std;
 
 Graph::Graph() = default;
 
@@ -40,8 +34,13 @@ void Graph::randomInit(int nNodes, int nConnections, bool directed) {
   for (vector<int> v : neighbours) {
     vector<int> w;
     for (int i=0; i<v.size(); i++) {
-      int cost = rand() % 20 + 1;
-      w.push_back(cost);
+//        Random Werte für normal zum Arbeiten
+        int cost = rand() % 20 + 1;
+
+//        Wert = 1 für Dijkstra Methode (ShortestReach)
+//        int cost = 1;
+
+        w.push_back(cost);
     }
     weights.push_back(w);
   }
@@ -73,17 +72,174 @@ vector<int> Graph::getWeights(int node) {
 
 std::ostream& operator<<(std::ostream& s, const Graph & obj) {
   for (int i=0; i<obj.neighbours.size(); i++) {
-    vector<int>::iterator it;
     s << "Node " << i << "\t";
-    for (int j=0; j<obj.neighbours[i].size(); j++) {
-      s << obj.neighbours[i].at(j) << "(" << obj.weights[i].at(j) << "), ";
+    for (int j : obj.neighbours[i]) {
+//        s << obj.neighbours[i].at(j) << "(" << obj.weights[i].at(j) << "), ";
+//        Ohne Gewicht
+        s << j << "\t";
+
     }
     s << endl;
   }
   return s;
 }
 
-bool Graph::allNodeAreReachable(vector<int> *graph, int NUMBER_OF_NODES, int start) {
+bool Graph::allNodeAreReachable(int start) {
+    auto * visited = new bool[getNumberOfNodes()];
 
-  return false;
+    for (int i = 0; i < getNumberOfNodes(); ++i) {
+        visited[i] = false;
+    }
+
+    visited[start] = true;
+
+    list<int> Q;
+    Q.push_back(start);
+
+    while (!Q.empty()) {
+        start = Q.front();
+        cout << start << "\t";
+
+        Q.pop_front();
+
+        for (auto i : neighbours[start]) {
+            if (!visited[i]) {
+                visited[i] = true;
+                Q.push_back(i);
+            }
+        }
+    }
+
+    for (int j = 0; j < getNumberOfNodes(); ++j) {
+        if (!visited[j]) return false;
+    }
+
+    return  true;
+}
+/*
+//    Mit Oetti am Sonntag angeschaut, weiter arbeiten (shortestReach mit Dijkstra)
+int Graph::shortestReach(int start, int end) {
+//    Falls start und end gleich sind, liefert die Funktion 0.
+    if (start == end) return 0;
+
+    auto * visited = new bool[getNumberOfNodes()];
+
+    for (int i = 0; i < getNumberOfNodes(); ++i) {
+        visited[i] = false;
+    }
+
+    visited[start] = true;
+
+//    todo: Funktion liefert die minimale Anzahl Knoten, welche von start nach end passiert werden muss.
+
+
+
+
+//    Falls kein Weg zwischen start und end existiert, so liefert die Funktion den Wert -1.
+    return -1;
+}
+*/
+
+int Graph::shortestReach(int start, int target) {
+//    Falls start und end gleich sind, liefert die Funktion 0.
+    if (start == target) return 0;
+
+    auto * visited = new bool[getNumberOfNodes()];
+    auto * predessesor = new int[getNumberOfNodes()];
+    int cost(0);
+
+    for (int i = 0; i < getNumberOfNodes(); ++i) {
+        visited[i] = false;
+    }
+
+    visited[start] = true;
+
+//    todo: Funktion liefert die minimale Anzahl Knoten, welche von start nach end passiert werden muss.
+
+    list<int> list_neighbour;
+    list_neighbour.push_back(start);
+
+    while(!list_neighbour.empty()) {
+        start = list_neighbour.front();
+        list_neighbour.pop_front();
+
+        for (int i = 0; i < list_neighbour.size(); ++i) {
+            if (!visited[neighbours[start].at(i)]) {
+
+                visited[neighbours[start].at(i)] = true;
+
+                int n = neighbours[start].at(i);
+                list_neighbour.push_back(n);
+
+                cost = weights[start].at(i) + 1;
+            }
+
+//            Wenn der Ziel-Node true ist, dann sind wir am Ziel und können abbrechen
+            if (visited[target]) return i;
+        }
+
+        for (int i = 0; i < getNumberOfNodes(); ++i) {
+            if (!visited[i]) {
+                visited[i] = true;
+                list_neighbour.push_back(i);
+            }
+
+            cout << "i: " << i << endl;
+            if (visited[target]) return weights[target].at(i);
+
+        }
+
+//        for (auto i : neighbours[start]) {
+//            if (!visited[i]) {
+//                visited[i] = true;
+//                list_neighbour.push_back(i);
+//            }
+//
+//            cout << "i: " << i << endl;
+//            if (visited[target]) return weights[target].at(i);
+//        }
+    }
+
+
+//    Falls kein Weg zwischen start und end existiert, so liefert die Funktion den Wert -1.
+    return -1;
+}
+
+
+bool Graph::connected(int start, int target) {
+    auto *visited = new bool[getNumberOfNodes()];
+
+    for (int i = 0; i < getNumberOfNodes(); ++i) {
+        visited[i] = false;
+    }
+
+    visited[start] = true;
+    list<int> search;
+
+    search.push_back(start);
+
+    while(!search.empty()) {
+        start = search.front();
+        cout << start << "\t";
+        search.pop_front();
+
+        for (auto i : neighbours[start]) {
+            if (!visited[i]) {
+                visited[i] = true;
+                search.push_back(i);
+            }
+            if (visited[target]) return true;
+        }
+    }
+
+    return false;
+}
+
+vector<int> Graph::getPath(int start, int end) {
+    /*Diese Funktion liefert einen Vector, welche alle Knoten beinhaltet,
+     * welche von start nach end passiert werden mu ̈ssen.
+     * Verwenden Sie fu ̈r diese Aufgabe den DFS Algorithmus.*/
+
+
+    return vector<int>();
 }

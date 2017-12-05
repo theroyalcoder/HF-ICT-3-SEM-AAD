@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <list>
-#include "limits.h"
 using namespace std;
 
 struct Entry{
@@ -10,12 +9,8 @@ struct Entry{
     bool marked;
     int precessor;
 
-//    Entry(int node, int distance, bool marked, int precessor);
     Entry(int node, int distance, bool marked, int precessor);
 };
-
-//Entry::Entry(int node, int distance, bool marked, int precessor) : node(node), distance(distance), marked(marked),
-//                                                                   precessor(precessor) {}
 
 Entry::Entry(int node, int distance, bool marked, int precessor) {
     this->node = node;
@@ -30,7 +25,6 @@ public:
     static void print(vector<int>* graph, int numberOfNodes);
 };
 
-
 vector<int> * SampleGraph::create(int numberOfNodes, int numberOfConnections, bool directed) {
     auto * result = new vector<int>[numberOfNodes];
 
@@ -38,9 +32,12 @@ vector<int> * SampleGraph::create(int numberOfNodes, int numberOfConnections, bo
     while (counter < numberOfConnections) {
         int source = rand() % numberOfNodes;
         int target = rand() % numberOfNodes;
+
         if (source != target) {
+
             if (find(result[source].begin(), result[source].end(), target) == result[source].end()) {
                 result[source].push_back(target);
+
                 if (!directed) {
                     result[target].push_back(source);
                 }
@@ -49,7 +46,7 @@ vector<int> * SampleGraph::create(int numberOfNodes, int numberOfConnections, bo
         }
     }
 
-    for (int i=0; i<numberOfNodes; i++) {
+    for (int i = 0; i < numberOfNodes; i++) {
         sort(result[i].begin(), result[i].end());
     }
 
@@ -60,6 +57,7 @@ void SampleGraph::print(vector<int>* graph, int numberOfNodes) {
     for (int i=0; i<numberOfNodes; i++) {
         vector<int>::iterator it;
         cout << "Node " << i << "\t";
+
         for (it=graph[i].begin(); it!=graph[i].end(); it++) {
             cout << *it << ", ";
         }
@@ -270,10 +268,6 @@ vector<int> getMotherNodes(vector<int>* graph, int NUMBER_OF_NODES) {
     return vec;
 }
 
-
-
-
-
 int main(int argc, char **argv) {
     const int NUMBER_OF_NODES = 10;
     const int NUMBER_OF_CONNECTIONS = 16;
@@ -282,7 +276,6 @@ int main(int argc, char **argv) {
     const int NUMBER_OF_NODES2 = 10;
     const int NUMBER_OF_CONNECTIONS2 = 16;
     vector<int>* dirGraph = SampleGraph::create(NUMBER_OF_NODES2, NUMBER_OF_CONNECTIONS2, true);
-
 
 /*    SampleGraph SG;
     SG.print(SG.create(NUMBER_OF_NODES, NUMBER_OF_CONNECTIONS), NUMBER_OF_NODES);
