@@ -1,4 +1,6 @@
-#include "C:\Users\nagara.INFORS-HT\Documents\GitHub\HF-ICT-AAD-1-SEM\stdc++.h"
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
 class Node {
