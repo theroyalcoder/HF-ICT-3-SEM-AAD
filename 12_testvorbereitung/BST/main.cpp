@@ -65,7 +65,9 @@ void TreeUtil::printMaximumPath(const vector<int> &values) {
 
     for (int i = 0; i < values.size(); ++i) {
         tempVal = calculateMaximumPath(values, i);
+        cout << tempVal << "\t";
         if (maxVal < tempVal) {
+//            cout << values[i] << endl;
             maxVal = tempVal;
         }
     }
