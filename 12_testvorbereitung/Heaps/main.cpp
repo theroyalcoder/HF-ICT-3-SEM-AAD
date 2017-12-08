@@ -61,7 +61,6 @@ public:
         int tmp = items[indexOne];
         items[indexOne] = items[indexTwo];
         items[indexTwo] = tmp;
-
     }
 
     void heapifyDown() {
